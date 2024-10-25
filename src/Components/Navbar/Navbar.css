@@ -1,57 +1,93 @@
-nav{
+nav {
     padding: 10px 2%;
     justify-content: space-between;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     background: #fff;
     position: sticky;
     top: 0;
     z-index: 10;
 }
-.nav-left .menu-icon{
+
+.nav-left .menu-icon {
     width: 22px;
     margin-right: 25px;
 }
-.nav-left .logo{
+
+.nav-left .logo {
     width: 130px;
 }
-.nav-middle .search-box{
+
+.nav-middle .search-box {
     border: 1px solid #ccc;
     margin-right: 15px;
     padding: 8px 12px;
     border-radius: 25px;
+    position: relative; /* Add this to position the suggestions */
 }
-.nav-middle .search-box input{
+
+.nav-middle .search-box input {
     width: 400px;
     border: 0;
     outline: 0;
     background: transparent;
 }
-.nav-middle .search-box img{
+
+.nav-middle .search-box img {
     width: 15px;
 }
-.nav-right img{
+
+.nav-right img {
     width: 25px;
     margin-right: 25px;
 }
-.nav-right .user-icon{
+
+.nav-right .user-icon {
     width: 35px;
     border-radius: 50%;
 }
-@media (max-width:900px){
-    .menu-icon{
+
+/* Suggestions Dropdown */
+.suggestions {
+    position: absolute;
+    top: 100%; /* Position below the search box */
+    left: 0;
+    right: 0; /* Full width */
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    max-height: 200px; /* Limit height */
+    overflow-y: auto; /* Enable scrolling */
+    margin-top: 5px; /* Space between search box and suggestions */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+/* Individual suggestion items */
+.suggestion-item {
+    padding: 10px 15px; /* Padding for suggestions */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .menu-icon {
         display: none;
     }
-    .nav-right img{
+    .nav-right img {
         display: none;
     }
-    .nav-right .user-icon{
+    .nav-right .user-icon {
         display: block;
         width: 30px;
     }
-    .logo{
+    .logo {
         width: 90px;
     }
-    .nav-middle .search-box input{
-        width: 100px;
+    .nav-middle .search-box input {
+        width: 100px; /* Reduced width for smaller screens */
     }
 }
