@@ -1,0 +1,53 @@
+.search-results {
+    padding: 20px;
+    max-width: 1200px; /* Maximum width for the search results */
+    margin: 0 auto; /* Center the results */
+}
+
+.results-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Increased gap for better spacing */
+}
+
+.result-item {
+    display: flex;
+    gap: 15px;
+    border: 1px solid #e0e0e0; /* Lighter border */
+    border-radius: 8px;
+    padding: 10px;
+    align-items: center;
+    transition: box-shadow 0.3s; /* Smooth shadow transition */
+    background-color: white; /* Set background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation effect */
+}
+
+.result-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.result-item img {
+    width: 240px; /* Increased width for thumbnails */
+    height: 135px; /* Increased height for thumbnails */
+    border-radius: 5px;
+    object-fit: cover; /* Ensures the image covers the dimensions properly */
+}
+
+.result-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allow info section to take remaining space */
+}
+
+.result-info h3 {
+    font-size: 16px; /* Adjust font size for the title */
+    color: #1a1a1a; /* Darker text for the title */
+    margin: 0; /* Remove default margin */
+}
+
+.result-info p {
+    font-size: 14px; /* Adjust font size for the description */
+    color: #606060; /* Gray color for description */
+    margin: 5px 0 0; /* Top margin for spacing */
+    line-height: 1.5; /* Increase line height for readability */
+}
